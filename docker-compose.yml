@@ -1,0 +1,10 @@
+version: '2'
+services:
+  web:
+    build: .
+    expose:
+      - "80"
+    environment:
+      - VIRTUAL_HOST: "hamhut1066.com"
+      - LETSENCRYPT_HOST: "hamhut1066.com"
+      - LETSENCRYPT_EMAIL: "hamhut@hamhut1066.com"
