@@ -5,6 +5,7 @@ before_script:
 
 stages:
   - build
+  - release
 
 variables:
   CONTAINER_TEST_IMAGE: registry.aoeu.me:5000/moredhel/personal_website:$CI_BUILD_REF_NAME
