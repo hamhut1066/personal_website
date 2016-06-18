@@ -1,5 +1,5 @@
 web:
-  build: .
+  image: "registry.aoeu.me:5000/moredhel/personal_website"
   expose:
     - "80"
   environment:
