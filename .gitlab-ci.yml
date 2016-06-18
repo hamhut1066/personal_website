@@ -1,0 +1,17 @@
+image: docker:git
+
+before_script:
+  - docker info
+
+stages:
+  - build
+
+variables:
+  CONTAINER_TEST_IMAGE: registry.aoeu.me:5000/moredhel/personal_website:$CI_BUILD_REF_NAME
+  CONTAINER_RELEASE_IMAGE: registry.aoeu.me:5000/moredhel/personal_website:latest
+
+build:
+  stage: build
+  script:
+    - docker build -t $CONTAINER_TEST_IMAGE .
+    - docker push $CONTAINER_TEST_IMAGE
